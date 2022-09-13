@@ -277,25 +277,25 @@
     (center)
     (right)
     ))
-(defwindow bar
+(defwindow bar0
     :exclusive false
     :monitor 0
     :geometry (geometry 
         :x "15px"
         :y "9px"
-        :width "99%"
+        :width "98%"
         :height "30px"
         :anchor "top center")
     :stacking "fg"
     :windowtype "dock"
     (bar_layout))
-(defwindow bar2
+(defwindow bar1
     :exclusive false
-    :monitor 0
+    :monitor 1
     :geometry (geometry 
         :x "15px"
         :y "9px"
-        :width "99%"
+        :width "98%"
         :height "30px"
         :anchor "top center")
     :stacking "bg"

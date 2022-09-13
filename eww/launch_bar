@@ -1,26 +1,22 @@
 #!/bin/bash
 
 ## Files and cmd
-FILE="$HOME/.cache/eww_launch.xyz"
-EWW="$HOME/.local/bin/eww/eww -c $HOME/.config/eww/bar"
+EWW="eww -c $HOME/.config/hypr/themes/garden/eww/"
+focusmon=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .id')
 
 ## Run eww daemon if not running already
-if [[ ! `pidof eww` ]]; then
+if [[ ! $(pidof eww) ]]; then
 	${EWW} daemon
 	sleep 1
 fi
 
 ## Open widgets 
-run_eww() {
-	${EWW} open-many \
-         bar
-}
+NB_MONITORS=($(hyprctl monitors -j | jq -r '.[] | .id'))
+for id in "${NB_MONITORS[@]}"; do
+    bar="bar$id"
+    hyprctl dispatch focusmonitor "$id"
+    ${EWW} open "$bar" 
+    [[ $id == 0 ]] && ${EWW} open sidebar
+done
 
-## Launch or close widgets accordingly
-if [[ ! -f "$FILE" ]]; then
-	touch "$FILE"
-	run_eww && bspc config -m LVDS-1 top_padding 49
-else
-	${EWW} close-all && killall eww
-	rm "$FILE"
-fi
+    hyprctl dispatch focusmonitor "$focusmon"
