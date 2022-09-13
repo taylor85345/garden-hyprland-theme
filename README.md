@@ -1,5 +1,9 @@
 # garden-hyprland-theme
 
+## Screenshot
+
+https://user-images.githubusercontent.com/36456160/170814674-50c49874-5fd7-419c-ae05-3891adfe2daa.mp4
+
 ## Installation
 For complete system config, please see https://github.com/taylor85345/hyprland-dotfiles
 
