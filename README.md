@@ -25,4 +25,4 @@ For complete system config, please see https://github.com/taylor85345/hyprland-d
 - [mpvpaper](https://github.com/GhostNaN/mpvpaper) - Video Backgrounds
 - [macchina](https://github.com/Macchina-CLI/macchina) - (Optional) Fetch Script
 - [socat](http://www.dest-unreach.org/socat/) - Socket utility for eww workspace module
-
+- [geticons](https://git.sr.ht/~zethra/geticons) - CLI tool for locating icons
