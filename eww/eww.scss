@@ -58,10 +58,10 @@ $white:     #E5E5E5;
 
 /** tooltip!! **/
 tooltip.background {
-    background-color: rgba(00, 00, 00, 0.0);
+    background-color: rgba(00, 00, 00, 0.5);
     font-size: 18;
     border-radius: 10px;
-    color: $background;
+    color: $white;
 }
 
 tooltip label {
@@ -98,12 +98,12 @@ tooltip label {
 .batbar {
   color: $green;
     background-color: $grey;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .bright_icon {
     font-size: 22;
     color: $orange;
-  margin: 0px 10px 0px 0px;
+  margin: 0px 10px 0px 5px;
 }
 .brightbar trough highlight {
   background-image: linear-gradient(to right, $orange 30%, #f2cdcd 50%, $orange 100% *50);
@@ -116,7 +116,7 @@ tooltip label {
 .volume_icon {
     font-size: 22;
     color: $blue;
-  margin: 0px 10px 0px 0px;
+  margin: 0px 10px 0px 5px;
 }
 
 
@@ -128,7 +128,7 @@ tooltip label {
 .module-wif {
     font-size: 22;
     color: $blue;
-  margin: 0px 10px 0px 5px;
+  margin: 0px 14px 0px 5px;
 }
 
 .iconlauncher {
@@ -148,7 +148,8 @@ tooltip label {
 }
 .iconbat, .iconmem {
     font-size: 15;
-    margin: 10px;
+    margin: 9px;
+    padding: 2px 6px 0px 0px;
 }
 
 
@@ -580,9 +581,9 @@ scale trough {
 
 .poweroff, .reboot, .firmware, .exit, .restart {
   margin: 0px 16px 0px 16px;
-  padding: 2px 15px 2px 9px;
+  padding: 4px 15px 4px 9px;
   border-radius: 25px;
-  font-size: 24px;
+  font-size: 25px;
   color: $black;
 }
 
